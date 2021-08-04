@@ -51,3 +51,7 @@ jobs:
         run: |
           cargo doc
           cargo package
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release --all-features
